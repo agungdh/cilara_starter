@@ -5,13 +5,6 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 class EloquentHook {
 
 	public function bootEloquent() {
-
-		$this->setInstance();
-
-		$this->loadDatabase();
-
-		$config = $this->getDB();
-
 		$capsule = new Capsule;
 
 		$capsule->addConnection([
