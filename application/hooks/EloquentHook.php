@@ -4,34 +4,6 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 
 class EloquentHook {
 
-	/**
-	 * Holds the instance
-	 * @var object
-	 */
-	protected $instance;
-
-	/**
-	 * Gets CI instance
-	 */
-	private function setInstance() {
-		$this->instance =& get_instance();
-	}
-
-	/**
-	 * Loads database
-	 */
-	private function loadDatabase() {
-		$this->instance->load->database(); 
-	}
-
-	/**
-	 * Returns the instance of the db
-	 * @return object
-	 */
-	private function getDB() {
-		return $this->instance->db;
-	}
-
 	public function bootEloquent() {
 
 		$this->setInstance();
